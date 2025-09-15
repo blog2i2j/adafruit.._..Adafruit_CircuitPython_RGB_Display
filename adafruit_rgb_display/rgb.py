@@ -255,6 +255,16 @@ class Display:
             raise ValueError("Rotation must be 0/90/180/270")
         self._rotation = val
 
+    @property
+    def root_group(self) -> None:
+        """Placeholder attribute to catch displayio use"""
+        raise NotImplementedError("Please use a displayio driver for the display. This is the pixel-level driver.")
+
+    @root_group.setter
+    def root_group(self, val) -> None:
+        raise NotImplementedError("Please use a displayio driver for the display. This is the pixel-level driver.")
+        
+
 
 class DisplaySPI(Display):
     """Base class for SPI type devices"""

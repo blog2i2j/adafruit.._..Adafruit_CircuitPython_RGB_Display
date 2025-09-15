@@ -258,11 +258,15 @@ class Display:
     @property
     def root_group(self) -> None:
         """Placeholder attribute to catch displayio use"""
-        raise NotImplementedError("Please use a displayio driver for the display. This is the pixel-level driver.")
+        raise NotImplementedError(
+            "Please use a displayio driver for the display. This is the pixel-level driver."
+        )
 
     @root_group.setter
     def root_group(self, val) -> None:
-        raise NotImplementedError("Please use a displayio driver for the display. This is the pixel-level driver.")
+        raise NotImplementedError(
+            "Please use a displayio driver for the display. This is the pixel-level driver."
+        )
         
 
 

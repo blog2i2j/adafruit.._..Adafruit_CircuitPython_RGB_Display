@@ -267,7 +267,6 @@ class Display:
         raise NotImplementedError(
             "Please use a displayio driver for the display. This is the pixel-level driver."
         )
-        
 
 
 class DisplaySPI(Display):

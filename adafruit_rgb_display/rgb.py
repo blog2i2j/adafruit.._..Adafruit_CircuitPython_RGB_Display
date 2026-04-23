@@ -58,7 +58,7 @@ def color565(
         if len(r) >= 3:
             red, g, b = r[0:3]
         else:
-            raise ValueError("Not enough values to unpack (expected 3, got %d)" % len(r))
+            raise ValueError(f"Not enough values to unpack (expected 3, got {len(r)})")
     else:
         red = r
     return (red & 0xF8) << 8 | (g & 0xFC) << 3 | b >> 3

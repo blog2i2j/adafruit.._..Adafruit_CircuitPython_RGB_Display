@@ -121,7 +121,7 @@ class Framebuffer:
 
         return (
             'mode "%sx%s"\n' % (self.xres, self.yres)  # noqa: UP031
-            + "    nonstd %s\n" % self.nonstd
+            + f"    nonstd {self.nonstd}\n"
             + "    rgba %s/%s,%s/%s,%s/%s,%s/%s\n"  # noqa: UP031
             % (
                 self.red.length,
@@ -136,14 +136,14 @@ class Framebuffer:
             + "endmode\n"
             + "\n"
             + "Frame buffer device information:\n"
-            + "    Device      : %s\n" % self.dev
-            + "    Name        : %s\n" % self.name
-            + "    Size        : (%d, %d)\n" % (self.xres, self.yres)
-            + "    Length      : %s\n" % self.screensize
-            + "    BPP         : %d\n" % self.bits_per_pixel
-            + "    Type        : %s\n" % type_name
-            + "    Visual      : %s\n" % visual_name
-            + "    LineLength  : %s\n" % self.line_length
+            + f"    Device      : {self.dev}\n"
+            + f"    Name        : {self.name}\n"
+            + f"    Size        : ({self.xres}, {self.yres})\n"
+            + f"    Length      : {self.screensize}\n"
+            + f"    BPP         : {self.bits_per_pixel}\n"
+            + f"    Type        : {type_name}\n"
+            + f"    Visual      : {visual_name}\n"
+            + f"    LineLength  : {self.line_length}\n"
         )
 
 
